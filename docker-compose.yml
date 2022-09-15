@@ -1,0 +1,13 @@
+version: '3'
+services:
+  weblogic:
+    container_name: AdminServer
+    build: .
+    ports:
+      - "7001:7001"
+      - "9002:9002"
+      - "4000:4000"
+    volumes:
+      - "./workspace:/home/oracle/workspace"
+      - "./certificados:/u02/certificado/"
+      - "./logs:/u02/logs/"
